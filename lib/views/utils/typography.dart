@@ -1,88 +1,75 @@
+import 'package:filllo_mobile/views/utils/mediaquery.dart';
 import 'package:flutter/material.dart';
 
 class AppTypography {
-  static const h4 = TextStyle(
+  static final h4 = TextStyle(
     fontWeight: FontWeight.w600,
-    fontSize: 32,
-    height: 35,
+    fontSize: SizeConfig.scaleText(32),
     letterSpacing: -0.2,
   );
-  static const h5 = TextStyle(
+  static final h5 = TextStyle(
     fontWeight: FontWeight.w700,
-    fontSize: 24,
-    height: 30,
+    fontSize: SizeConfig.scaleText(24),
     letterSpacing: -0.2,
   );
-  static const h6 = TextStyle(
+  static final h6 = TextStyle(
     fontWeight: FontWeight.w700,
-    fontSize: 20,
-    height: 25,
+    fontSize: SizeConfig.scaleText(20),
     letterSpacing: -0.2,
   );
-  static const bodyLargeSB = TextStyle(
+  static final bodyLargeSB = TextStyle(
     fontWeight: FontWeight.w600,
-    fontSize: 17,
-    height: 25,
+    fontSize: SizeConfig.scaleText(17),
     letterSpacing: 0,
   );
-  static const bodyLargeM = TextStyle(
+  static final bodyLargeM = TextStyle(
     fontWeight: FontWeight.w500,
-    fontSize: 17,
-    height: 25,
+    fontSize: SizeConfig.scaleText(17),
     letterSpacing: 0,
   );
-  static const bodyLargeR = TextStyle(
+  static final bodyLargeR = TextStyle(
     fontWeight: FontWeight.w400,
-    fontSize: 17,
-    height: 25,
+    fontSize: SizeConfig.scaleText(17),
     letterSpacing: 0,
   );
-  static const bodyMediumSB = TextStyle(
+  static final bodyMediumSB = TextStyle(
     fontWeight: FontWeight.w600,
-    fontSize: 15,
-    height: 20,
+    fontSize: SizeConfig.scaleText(15),
     letterSpacing: 0,
   );
-  static const bodyMediumM = TextStyle(
+  static final bodyMediumM = TextStyle(
     fontWeight: FontWeight.w500,
-    fontSize: 15,
-    height: 20,
+    fontSize: SizeConfig.scaleText(15),
     letterSpacing: 0,
   );
-  static const bodyMediumR = TextStyle(
+  static final bodyMediumR = TextStyle(
     fontWeight: FontWeight.w400,
-    fontSize: 15,
-    height: 20,
+    fontSize: SizeConfig.scaleText(15),
     letterSpacing: 0,
   );
-  static const bodySmallSB = TextStyle(
+  static final bodySmallSB = TextStyle(
     fontWeight: FontWeight.w600,
-    fontSize: 13,
-    height: 8,
+    fontSize: SizeConfig.scaleText(13),
     letterSpacing: 0,
   );
-  static const bodySmallM = TextStyle(
+  static final bodySmallM = TextStyle(
     fontWeight: FontWeight.w500,
-    fontSize: 13,
-    height: 8,
+    fontSize: SizeConfig.scaleText(13),
     letterSpacing: 0,
   );
-  static const bodySmallR = TextStyle(
+  static final bodySmallR = TextStyle(
     fontWeight: FontWeight.w400,
-    fontSize: 13,
-    height: 8,
+    fontSize: SizeConfig.scaleText(13),
     letterSpacing: 0,
   );
-  static const captionR = TextStyle(
+  static final captionR = TextStyle(
     fontWeight: FontWeight.w400,
-    fontSize: 11,
-    height: 18,
+    fontSize: SizeConfig.scaleText(11),
     letterSpacing: 0,
   );
-  static const captionM = TextStyle(
+  static final captionM = TextStyle(
     fontWeight: FontWeight.w500,
-    fontSize: 11,
-    height: 18,
+    fontSize: SizeConfig.scaleText(11),
     letterSpacing: 0,
   );
 }

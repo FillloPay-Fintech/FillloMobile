@@ -1,4 +1,5 @@
 import 'package:filllo_mobile/controllers/onboarding_controller.dart';
+import 'package:filllo_mobile/views/screens/onboarding3.dart';
 import 'package:filllo_mobile/views/utils/colours.dart';
 import 'package:filllo_mobile/views/utils/mediaquery.dart';
 import 'package:filllo_mobile/views/utils/typography.dart';
@@ -191,11 +192,14 @@ class Onboarding2Screen extends StatelessWidget {
                                   const Expanded(child: Gap(4)),
                                   BlackButton(
                                     text: "Next",
-                                    onTap: () => onboardingProvider
-                                        .pageController
-                                        .nextPage(
-                                            duration: Durations.long3,
-                                            curve: Easing.standard),
+                                    onTap: () => Navigator.of(context)
+                                        .pushAndRemoveUntil(
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const Onboarding3Screen(),
+                                      ),
+                                      (route) => false,
+                                    ),
                                   ),
                                   Gap(SizeConfig.scaleHeight(35)),
                                 ],

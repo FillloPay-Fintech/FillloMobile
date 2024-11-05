@@ -14,7 +14,7 @@ class OrangeButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         height: SizeConfig.scaleHeight(61),
-        width: SizeConfig.scaleWidth(200),
+        width: double.maxFinite,
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(80)),
           color: AppColours.brightOrange,

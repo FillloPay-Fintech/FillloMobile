@@ -1,4 +1,5 @@
 import 'package:filllo_mobile/controllers/onboarding_controller.dart';
+import 'package:filllo_mobile/controllers/sign_up_controller.dart';
 import 'package:filllo_mobile/views/screens/onboarding1.dart';
 import 'package:filllo_mobile/views/utils/colours.dart';
 import 'package:filllo_mobile/views/utils/mediaquery.dart';
@@ -19,6 +20,9 @@ class FillloMobile extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (context) => OnboardingController(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => SignUpController(),
         ),
       ],
       child: MaterialApp(

@@ -37,6 +37,7 @@ dependencies:
   gap: ^3.0.1
   smooth_page_indicator: ^1.2.0+3
   provider: ^6.1.2
+  fluttertoast: ^8.2.8
 
 dev_dependencies:
   flutter_test:

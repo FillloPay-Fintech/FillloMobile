@@ -1,4 +1,5 @@
 import 'package:filllo_mobile/controllers/sign_up_controller.dart';
+import 'package:filllo_mobile/views/screens/create_account.dart';
 import 'package:filllo_mobile/views/utils/colours.dart';
 import 'package:filllo_mobile/views/utils/mediaquery.dart';
 import 'package:filllo_mobile/views/utils/typography.dart';
@@ -179,13 +180,20 @@ class SignupScreen extends StatelessWidget {
                             onTap: () {
                               if (value.accountType == null) {
                                 return Fluttertoast.showToast(
-                                    msg: "This is Center Short Toast",
-                                    toastLength: Toast.LENGTH_SHORT,
-                                    gravity: ToastGravity.CENTER,
+                                    msg: "Select Account Type",
+                                    fontAsset:
+                                        "assets/fonts/sf_pro_display/SFPRODISPLAYBOLD.otf",
+                                    toastLength: Toast.LENGTH_LONG,
+                                    gravity: ToastGravity.TOP,
                                     timeInSecForIosWeb: 1,
                                     backgroundColor: Colors.red,
                                     textColor: Colors.white,
                                     fontSize: SizeConfig.scaleText(16));
+                              } else {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CreateAccountScreen(),
+                                ));
                               }
                             });
                       }),

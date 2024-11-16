@@ -4,7 +4,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 errorToast(String msg) {
   return Fluttertoast.showToast(
-      msg: "Select Account Type",
+      msg: msg,
       fontAsset: "assets/fonts/sf_pro_display/SFPRODISPLAYBOLD.otf",
       toastLength: Toast.LENGTH_LONG,
       gravity: ToastGravity.TOP,

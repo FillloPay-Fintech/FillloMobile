@@ -3,9 +3,9 @@ import 'package:filllo_mobile/views/screens/create_account.dart';
 import 'package:filllo_mobile/views/utils/colours.dart';
 import 'package:filllo_mobile/views/utils/mediaquery.dart';
 import 'package:filllo_mobile/views/utils/typography.dart';
+import 'package:filllo_mobile/views/widgets/error_toast.dart';
 import 'package:filllo_mobile/views/widgets/orange_button.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
 
@@ -173,22 +173,16 @@ class SignupScreen extends StatelessWidget {
                           );
                         }),
                       ),
-                      Gap(SizeConfig.scaleHeight(220)),
+                      const AspectRatio(
+                        aspectRatio: 1.75,
+                      ),
+                      // Gap(SizeConfig.scaleHeight(220)),
                       Consumer<SignUpController>(builder: (context, value, _) {
                         return OrangeButton(
                             text: "Continue",
                             onTap: () {
                               if (value.accountType == null) {
-                                return Fluttertoast.showToast(
-                                    msg: "Select Account Type",
-                                    fontAsset:
-                                        "assets/fonts/sf_pro_display/SFPRODISPLAYBOLD.otf",
-                                    toastLength: Toast.LENGTH_LONG,
-                                    gravity: ToastGravity.TOP,
-                                    timeInSecForIosWeb: 1,
-                                    backgroundColor: Colors.red,
-                                    textColor: Colors.white,
-                                    fontSize: SizeConfig.scaleText(16));
+                                return errorToast("Select Account Type");
                               } else {
                                 Navigator.of(context).push(MaterialPageRoute(
                                   builder: (context) =>

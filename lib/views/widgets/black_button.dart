@@ -1,5 +1,5 @@
 import 'package:filllo_mobile/views/utils/colours.dart';
-import 'package:filllo_mobile/views/utils/mediaquery.dart';
+import '../utils/utils.dart';
 import 'package:filllo_mobile/views/utils/typography.dart';
 import 'package:flutter/material.dart';
 

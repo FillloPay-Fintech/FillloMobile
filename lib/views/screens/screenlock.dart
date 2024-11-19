@@ -4,9 +4,7 @@ import 'package:filllo_mobile/views/screens/fingerprint_screen.dart';
 import 'package:filllo_mobile/views/screens/get_started.dart';
 import 'package:filllo_mobile/views/screens/pincode_screen.dart';
 
-import 'package:filllo_mobile/views/utils/colours.dart';
-import 'package:filllo_mobile/views/utils/mediaquery.dart';
-import 'package:filllo_mobile/views/utils/typography.dart';
+import '../utils/utils.dart';
 
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';

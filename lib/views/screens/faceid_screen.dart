@@ -1,9 +1,7 @@
 import 'dart:math';
 
 import 'package:filllo_mobile/controllers/sign_up_controller.dart';
-import 'package:filllo_mobile/views/utils/colours.dart';
-import 'package:filllo_mobile/views/utils/mediaquery.dart';
-import 'package:filllo_mobile/views/utils/typography.dart';
+import '../utils/utils.dart';
 import 'package:filllo_mobile/views/widgets/orange_button.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';

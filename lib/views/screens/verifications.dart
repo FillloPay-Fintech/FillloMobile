@@ -1,7 +1,5 @@
-import 'package:filllo_mobile/views/screens/create_account.dart';
-import 'package:filllo_mobile/views/utils/colours.dart';
-import 'package:filllo_mobile/views/utils/mediaquery.dart';
-import 'package:filllo_mobile/views/utils/typography.dart';
+import 'package:filllo_mobile/views/screens/screenlock.dart';
+import '../utils/utils.dart';
 import 'package:filllo_mobile/views/widgets/error_toast.dart';
 import 'package:filllo_mobile/views/widgets/orange_button.dart';
 import 'package:flutter/gestures.dart';
@@ -215,8 +213,7 @@ class VerificationScreen extends StatelessWidget {
                               return errorToast("Enter verification code");
                             } else {
                               Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) =>
-                                    const CreateAccountScreen(),
+                                builder: (context) => const ScreenlockScreen(),
                               ));
                             }
                           }),

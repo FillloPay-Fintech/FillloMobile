@@ -1,6 +1,5 @@
 import 'package:filllo_mobile/views/screens/verifications.dart';
-import 'package:filllo_mobile/views/utils/mediaquery.dart';
-import 'package:filllo_mobile/views/utils/typography.dart';
+import '../utils/utils.dart';
 import 'package:filllo_mobile/views/widgets/error_toast.dart';
 import 'package:filllo_mobile/views/widgets/orange_button.dart';
 import 'package:flutter/material.dart';

@@ -28,6 +28,7 @@ class Onboarding1Screen extends StatelessWidget {
                 backgroundImage: AssetImage(
                   "assets/images/wallet-filllo.png",
                 ),
+                backgroundColor: Colors.white,
               ),
               const Gap(16),
               Text(

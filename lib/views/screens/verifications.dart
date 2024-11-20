@@ -202,7 +202,7 @@ class VerificationScreen extends StatelessWidget {
                             style: AppTypography.bodyLargeM
                                 .copyWith(color: AppColours.brightOrange)),
                       ])),
-                      const AspectRatio(aspectRatio: 1.4),
+                      const AspectRatio(aspectRatio: 1.45),
                       OrangeButton(
                           text: "Continue",
                           onTap: () {

@@ -174,9 +174,8 @@ class SignupScreen extends StatelessWidget {
                         }),
                       ),
                       const AspectRatio(
-                        aspectRatio: 1.75,
+                        aspectRatio: 1.6,
                       ),
-                      // Gap(SizeConfig.scaleHeight(220)),
                       Consumer<SignUpController>(builder: (context, value, _) {
                         return OrangeButton(
                             text: "Continue",

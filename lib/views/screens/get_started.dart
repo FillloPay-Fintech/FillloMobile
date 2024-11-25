@@ -25,12 +25,12 @@ class GetStartedScreen extends StatelessWidget {
             const AspectRatio(aspectRatio: 5),
             Text(
               "Welcome to Filllo",
-              style: AppTypography.h4.copyWith(color: Colors.white),
+              style: AppTypography().h4.copyWith(color: Colors.white),
             ),
             const Gap(16),
             Text(
               "Voila! You have successfully created your\naccount.",
-              style: AppTypography.bodyLargeM.copyWith(color: Colors.white),
+              style: AppTypography().bodyLargeM.copyWith(color: Colors.white),
               textAlign: TextAlign.center,
             ),
             const AspectRatio(aspectRatio: 3),
@@ -45,12 +45,12 @@ class GetStartedScreen extends StatelessWidget {
   }
 }
 
-class CheckIcon extends CustomPainter implements SizeConfig {
+class CheckIcon extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint checkPaint = Paint()
       ..style = PaintingStyle.stroke
-      ..strokeWidth = SizeConfig.scaleWidth(25)
+      ..strokeWidth = SizeConfig.instance().scaleWidth(25)
       ..strokeCap = StrokeCap.round
       ..color = Colors.green.shade300;
 
@@ -73,26 +73,38 @@ class CheckIcon extends CustomPainter implements SizeConfig {
     // Draw the path on the canvas
     canvas.drawPath(path, checkPaint);
     //left hand side circles
-    canvas.drawCircle(Offset(size.width * 1.05, center.dy * 0.3),
-        SizeConfig.scaleWidth(8), circlePaint..color = AppColours.brightOrange);
-    canvas.drawCircle(Offset(size.width * 0.95, size.height * -0.15),
-        SizeConfig.scaleWidth(7), circlePaint..color = Colors.green.shade300);
-    canvas.drawCircle(Offset(size.width * 1.05, size.height * 0.85),
-        SizeConfig.scaleWidth(6), circlePaint..color = AppColours.brightOrange);
-    canvas.drawCircle(Offset(size.width * 1.15, size.height * 1.1),
-        SizeConfig.scaleWidth(12), circlePaint..color = Colors.white);
+    canvas.drawCircle(
+        Offset(size.width * 1.05, center.dy * 0.3),
+        SizeConfig.instance().scaleWidth(8),
+        circlePaint..color = AppColours.brightOrange);
+    canvas.drawCircle(
+        Offset(size.width * 0.95, size.height * -0.15),
+        SizeConfig.instance().scaleWidth(7),
+        circlePaint..color = Colors.green.shade300);
+    canvas.drawCircle(
+        Offset(size.width * 1.05, size.height * 0.85),
+        SizeConfig.instance().scaleWidth(6),
+        circlePaint..color = AppColours.brightOrange);
+    canvas.drawCircle(
+        Offset(size.width * 1.15, size.height * 1.1),
+        SizeConfig.instance().scaleWidth(12),
+        circlePaint..color = Colors.white);
 
     //right hand side circles
     canvas.drawCircle(
         Offset(size.width * -0.05, center.dy * 0.3),
-        SizeConfig.scaleWidth(16),
+        SizeConfig.instance().scaleWidth(16),
         circlePaint..color = AppColours.brightOrange);
     canvas.drawCircle(Offset(size.width * -0.23, size.height * 0.3),
-        SizeConfig.scaleWidth(7), circlePaint..color = Colors.white);
-    canvas.drawCircle(Offset(size.width * 0.13, size.height * 0.85),
-        SizeConfig.scaleWidth(6), circlePaint..color = Colors.green.shade300);
-    canvas.drawCircle(Offset(size.width * -0.28, size.height * 1.1),
-        SizeConfig.scaleWidth(6), circlePaint..color = AppColours.brightOrange);
+        SizeConfig.instance().scaleWidth(7), circlePaint..color = Colors.white);
+    canvas.drawCircle(
+        Offset(size.width * 0.13, size.height * 0.85),
+        SizeConfig.instance().scaleWidth(6),
+        circlePaint..color = Colors.green.shade300);
+    canvas.drawCircle(
+        Offset(size.width * -0.28, size.height * 1.1),
+        SizeConfig.instance().scaleWidth(6),
+        circlePaint..color = AppColours.brightOrange);
   }
 
   @override

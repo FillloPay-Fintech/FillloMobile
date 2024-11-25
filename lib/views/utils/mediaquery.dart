@@ -1,17 +1,21 @@
 import 'package:flutter/widgets.dart';
 
 class SizeConfig {
+  SizeConfig.instance();
+  static final SizeConfig _instance = SizeConfig.instance();
+  factory SizeConfig() => _instance;
+
   static double _screenWidth = 0;
   static double _screenHeight = 0;
   static double _blockWidth = 0;
   static double _blockHeight = 0;
-  static double _textMultiplier = 0;
+  TextScaler _textMultiplier = TextScaler.noScaling;
 
   // Reference design dimensions from Figma
   static const double _figmaDesignWidth = 375;
   static const double _figmaDesignHeight = 812;
 
-  static void init(BuildContext context) {
+  Future<void> init(BuildContext context) async {
     _screenWidth = MediaQuery.of(context).size.width;
     _screenHeight = MediaQuery.of(context).size.height;
 
@@ -20,18 +24,18 @@ class SizeConfig {
     _blockHeight = _screenHeight / _figmaDesignHeight;
 
     // Customize text scaling based on screen width
-    _textMultiplier = _blockWidth;
+    _textMultiplier = MediaQuery.of(context).textScaler.clamp();
   }
 
-  static double scaleWidth(double inputWidth) {
+  double scaleWidth(double inputWidth) {
     return _blockWidth * inputWidth;
   }
 
-  static double scaleHeight(double inputHeight) {
+  double scaleHeight(double inputHeight) {
     return _blockHeight * inputHeight;
   }
 
-  static double scaleText(double inputTextSize) {
-    return _textMultiplier * inputTextSize;
+  double scaleText(double inputTextSize) {
+    return _textMultiplier.scale(inputTextSize);
   }
 }

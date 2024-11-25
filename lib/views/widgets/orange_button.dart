@@ -13,7 +13,7 @@ class OrangeButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: SizeConfig.scaleHeight(61),
+        height: SizeConfig.instance().scaleHeight(61),
         width: double.maxFinite,
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(80)),
@@ -22,7 +22,7 @@ class OrangeButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: AppTypography.bodyLargeSB.copyWith(color: Colors.white),
+            style: AppTypography().bodyLargeSB.copyWith(color: Colors.white),
           ),
         ),
       ),

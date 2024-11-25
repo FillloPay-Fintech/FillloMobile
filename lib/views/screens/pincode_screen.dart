@@ -22,8 +22,8 @@ class PincodeScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.scaleWidth(8),
-                vertical: SizeConfig.scaleHeight(8)),
+                horizontal: SizeConfig.instance().scaleWidth(8),
+                vertical: SizeConfig.instance().scaleHeight(8)),
             child: Row(
               children: [
                 const Gap(
@@ -38,13 +38,13 @@ class PincodeScreen extends StatelessWidget {
                 const Expanded(child: Gap(4)),
                 Text(
                   "Pin Code",
-                  style: AppTypography.h5.copyWith(color: Colors.white),
+                  style: AppTypography().h5.copyWith(color: Colors.white),
                 ),
                 const Expanded(child: Gap(4)),
               ],
             ),
           ),
-          Gap(SizeConfig.scaleHeight(32)),
+          Gap(SizeConfig.instance().scaleHeight(32)),
           Expanded(
             child: Container(
               width: double.maxFinite,
@@ -58,37 +58,38 @@ class PincodeScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Gap(SizeConfig.scaleHeight(16)),
+                    Gap(SizeConfig.instance().scaleHeight(16)),
                     Padding(
                       padding: EdgeInsets.symmetric(
-                          horizontal: SizeConfig.scaleWidth(16)),
+                          horizontal: SizeConfig.instance().scaleWidth(16)),
                       child: Text(
                         "Set Pin Code",
-                        style: AppTypography.h4,
+                        style: AppTypography().h4,
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    Gap(SizeConfig.scaleHeight(8)),
+                    Gap(SizeConfig.instance().scaleHeight(8)),
                     Padding(
                       padding: EdgeInsets.symmetric(
-                          horizontal: SizeConfig.scaleWidth(16)),
+                          horizontal: SizeConfig.instance().scaleWidth(16)),
                       child: Text(
                         "Set 4 digit pin code to unlock app",
                         textAlign: TextAlign.center,
-                        style: AppTypography.bodyLargeM
+                        style: AppTypography()
+                            .bodyLargeM
                             .copyWith(color: Colors.black26),
                       ),
                     ),
-                    Gap(SizeConfig.scaleHeight(32)),
+                    Gap(SizeConfig.instance().scaleHeight(32)),
                     Padding(
                       padding: EdgeInsets.symmetric(
-                          horizontal: SizeConfig.scaleWidth(16)),
+                          horizontal: SizeConfig.instance().scaleWidth(16)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
-                            height: SizeConfig.scaleHeight(56),
-                            width: SizeConfig.scaleWidth(56),
+                            height: SizeConfig.instance().scaleHeight(56),
+                            width: SizeConfig.instance().scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -104,7 +105,8 @@ class PincodeScreen extends StatelessWidget {
                               focusNode: focusNodes[0],
                               controller: controllers[0],
                               textAlign: TextAlign.center,
-                              style: AppTypography.h4
+                              style: AppTypography()
+                                  .h4
                                   .copyWith(color: AppColours.brightOrange),
                               maxLength: 1,
                               onChanged: (value) {
@@ -116,16 +118,17 @@ class PincodeScreen extends StatelessWidget {
                                 focusNodes[1].requestFocus();
                               },
                               decoration: InputDecoration(
-                                  hintStyle: AppTypography.h4
+                                  hintStyle: AppTypography()
+                                      .h4
                                       .copyWith(color: AppColours.brightOrange),
                                   border: InputBorder.none,
                                   counterText: ""),
                             ),
                           ),
-                          Gap(SizeConfig.scaleWidth(16)),
+                          Gap(SizeConfig.instance().scaleWidth(16)),
                           Container(
-                            height: SizeConfig.scaleHeight(56),
-                            width: SizeConfig.scaleWidth(56),
+                            height: SizeConfig.instance().scaleHeight(56),
+                            width: SizeConfig.instance().scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -141,7 +144,8 @@ class PincodeScreen extends StatelessWidget {
                               focusNode: focusNodes[1],
                               controller: controllers[1],
                               textAlign: TextAlign.center,
-                              style: AppTypography.h4
+                              style: AppTypography()
+                                  .h4
                                   .copyWith(color: AppColours.brightOrange),
                               maxLength: 1,
                               onChanged: (value) {
@@ -153,16 +157,17 @@ class PincodeScreen extends StatelessWidget {
                                 focusNodes[2].requestFocus();
                               },
                               decoration: InputDecoration(
-                                  hintStyle: AppTypography.h4
+                                  hintStyle: AppTypography()
+                                      .h4
                                       .copyWith(color: AppColours.brightOrange),
                                   border: InputBorder.none,
                                   counterText: ""),
                             ),
                           ),
-                          Gap(SizeConfig.scaleWidth(16)),
+                          Gap(SizeConfig.instance().scaleWidth(16)),
                           Container(
-                            height: SizeConfig.scaleHeight(56),
-                            width: SizeConfig.scaleWidth(56),
+                            height: SizeConfig.instance().scaleHeight(56),
+                            width: SizeConfig.instance().scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -178,7 +183,8 @@ class PincodeScreen extends StatelessWidget {
                               focusNode: focusNodes[2],
                               controller: controllers[2],
                               textAlign: TextAlign.center,
-                              style: AppTypography.h4
+                              style: AppTypography()
+                                  .h4
                                   .copyWith(color: AppColours.brightOrange),
                               maxLength: 1,
                               onChanged: (value) {
@@ -190,16 +196,17 @@ class PincodeScreen extends StatelessWidget {
                                 focusNodes[3].requestFocus();
                               },
                               decoration: InputDecoration(
-                                  hintStyle: AppTypography.h4
+                                  hintStyle: AppTypography()
+                                      .h4
                                       .copyWith(color: AppColours.brightOrange),
                                   border: InputBorder.none,
                                   counterText: ""),
                             ),
                           ),
-                          Gap(SizeConfig.scaleWidth(16)),
+                          Gap(SizeConfig.instance().scaleWidth(16)),
                           Container(
-                            height: SizeConfig.scaleHeight(56),
-                            width: SizeConfig.scaleWidth(56),
+                            height: SizeConfig.instance().scaleHeight(56),
+                            width: SizeConfig.instance().scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -215,7 +222,8 @@ class PincodeScreen extends StatelessWidget {
                               focusNode: focusNodes[3],
                               controller: controllers[3],
                               textAlign: TextAlign.center,
-                              style: AppTypography.h4
+                              style: AppTypography()
+                                  .h4
                                   .copyWith(color: AppColours.brightOrange),
                               maxLength: 1,
                               onChanged: (value) {
@@ -227,7 +235,8 @@ class PincodeScreen extends StatelessWidget {
                                 focusNodes[3].unfocus();
                               },
                               decoration: InputDecoration(
-                                  hintStyle: AppTypography.h4
+                                  hintStyle: AppTypography()
+                                      .h4
                                       .copyWith(color: AppColours.brightOrange),
                                   border: InputBorder.none,
                                   counterText: ""),
@@ -236,7 +245,7 @@ class PincodeScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Gap(SizeConfig.scaleHeight(24)),
+                    Gap(SizeConfig.instance().scaleHeight(24)),
                     AspectRatio(
                       aspectRatio: 0.5,
                       child: Container(
@@ -270,7 +279,7 @@ class PincodeScreen extends StatelessWidget {
                                               bottom: 8.0),
                                           child: Text(
                                             ".",
-                                            style: AppTypography.h5,
+                                            style: AppTypography().h5,
                                           ),
                                         ));
                                   }
@@ -309,7 +318,7 @@ class PincodeScreen extends StatelessWidget {
                                     alignment: Alignment.topCenter,
                                     child: Text(
                                       newIndex.toString(),
-                                      style: AppTypography.h5,
+                                      style: AppTypography().h5,
                                     ),
                                   );
                                 },

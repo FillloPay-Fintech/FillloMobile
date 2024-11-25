@@ -19,8 +19,8 @@ class FaceidScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.scaleWidth(8),
-                vertical: SizeConfig.scaleHeight(8)),
+                horizontal: SizeConfig.instance().scaleWidth(8),
+                vertical: SizeConfig.instance().scaleHeight(8)),
             child: Row(
               children: [
                 GestureDetector(
@@ -32,13 +32,13 @@ class FaceidScreen extends StatelessWidget {
                 const Expanded(child: Gap(4)),
                 Text(
                   "Face ID",
-                  style: AppTypography.h5.copyWith(color: Colors.white),
+                  style: AppTypography().h5.copyWith(color: Colors.white),
                 ),
                 const Expanded(child: Gap(4)),
               ],
             ),
           ),
-          Gap(SizeConfig.scaleHeight(32)),
+          Gap(SizeConfig.instance().scaleHeight(32)),
           Expanded(
             child: Container(
               width: double.maxFinite,
@@ -49,62 +49,60 @@ class FaceidScreen extends StatelessWidget {
                     topRight: Radius.circular(24)),
               ),
               child: Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: SizeConfig.scaleWidth(16)),
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Gap(SizeConfig.scaleHeight(40)),
+                padding: EdgeInsets.symmetric(
+                    horizontal: SizeConfig.instance().scaleWidth(16)),
+                child: Column(
+                  children: [
+                    Gap(SizeConfig.instance().scaleHeight(40)),
 
-                      Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          SizedBox(
-                            height: 200,
-                            width: 200,
-                            child: CustomPaint(
-                              painter: CircleBackground(),
-                            ),
+                    Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        SizedBox(
+                          height: 200,
+                          width: 200,
+                          child: CustomPaint(
+                            painter: CircleBackground(),
                           ),
-                          Container(
-                              height: 80,
-                              width: 80,
-                              decoration: const BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(16))),
-                              child: Image.asset(
-                                "assets/images/face-id.png",
-                                color: AppColours.brightOrange,
-                              )),
-                        ],
-                      ),
-                      const AspectRatio(
-                        aspectRatio: 4,
-                      ),
-                      Text(
-                        "Set Up\n Your Face ID",
-                        style: AppTypography.h4,
-                        textAlign: TextAlign.center,
-                      ),
-                      Gap(SizeConfig.scaleHeight(16)),
-                      Text(
-                        "First position your face in the camera frame.\nThen move your head in a circle to show all angles of your face ",
-                        textAlign: TextAlign.center,
-                        style: AppTypography.bodyLargeM
-                            .copyWith(color: Colors.black26),
-                      ),
-                      Gap(SizeConfig.scaleHeight(32)),
+                        ),
+                        Container(
+                            height: 80,
+                            width: 80,
+                            decoration: const BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(16))),
+                            child: Image.asset(
+                              "assets/images/face-id.png",
+                              color: AppColours.brightOrange,
+                            )),
+                      ],
+                    ),
+                    const AspectRatio(
+                      aspectRatio: 4,
+                    ),
+                    Text(
+                      "Set Up\n Your Face ID",
+                      style: AppTypography().h4,
+                      textAlign: TextAlign.center,
+                    ),
+                    Gap(SizeConfig.instance().scaleHeight(16)),
+                    Text(
+                      "First position your face in the camera frame.\nThen move your head in a circle to show all angles of your face ",
+                      textAlign: TextAlign.center,
+                      style: AppTypography()
+                          .bodyLargeM
+                          .copyWith(color: Colors.black26),
+                    ),
 
-                      const AspectRatio(
-                        aspectRatio: 5,
-                      ),
-                      // Gap(SizeConfig.scaleHeight(220)),
-                      Consumer<SignUpController>(builder: (context, value, _) {
-                        return OrangeButton(text: "Continue", onTap: () {});
-                      }),
-                    ],
-                  ),
+                    const AspectRatio(
+                      aspectRatio: 3.2,
+                    ),
+                    // Gap(SizeConfig.instance().scaleHeight(220)),
+                    Consumer<SignUpController>(builder: (context, value, _) {
+                      return OrangeButton(text: "Continue", onTap: () {});
+                    }),
+                  ],
                 ),
               ),
             ),

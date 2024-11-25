@@ -28,16 +28,18 @@ class Onboarding1Screen extends StatelessWidget {
                 backgroundImage: AssetImage(
                   "assets/images/wallet-filllo.png",
                 ),
+                backgroundColor: Colors.white,
               ),
               const Gap(16),
               Text(
                 "Filllo Pay",
-                style: AppTypography.h4.copyWith(color: Colors.white),
+                style: AppTypography().h4.copyWith(color: Colors.white),
               ),
               const Expanded(child: Gap(8)),
               Text(
                 "Powered by Filllo",
-                style: AppTypography.bodySmallSB.copyWith(color: Colors.white),
+                style:
+                    AppTypography().bodySmallSB.copyWith(color: Colors.white),
               ),
               const Gap(8),
             ],

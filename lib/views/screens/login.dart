@@ -16,8 +16,8 @@ class LoginScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.scaleWidth(8),
-                vertical: SizeConfig.scaleHeight(8)),
+                horizontal: SizeConfig.instance().scaleWidth(8),
+                vertical: SizeConfig.instance().scaleHeight(8)),
             child: Row(
               children: [
                 GestureDetector(
@@ -29,13 +29,13 @@ class LoginScreen extends StatelessWidget {
                 const Expanded(child: Gap(4)),
                 Text(
                   "Log In",
-                  style: AppTypography.h5.copyWith(color: Colors.white),
+                  style: AppTypography().h5.copyWith(color: Colors.white),
                 ),
                 const Expanded(child: Gap(4)),
               ],
             ),
           ),
-          Gap(SizeConfig.scaleHeight(32)),
+          Gap(SizeConfig.instance().scaleHeight(32)),
           Expanded(
             child: Container(
               width: double.maxFinite,
@@ -46,38 +46,40 @@ class LoginScreen extends StatelessWidget {
                     topRight: Radius.circular(24)),
               ),
               child: Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: SizeConfig.scaleWidth(16)),
+                padding: EdgeInsets.symmetric(
+                    horizontal: SizeConfig.instance().scaleWidth(16)),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Gap(SizeConfig.scaleHeight(16)),
+                      Gap(SizeConfig.instance().scaleHeight(16)),
                       Text(
                         "Welcome\n Log In To Enter",
-                        style: AppTypography.h4,
+                        style: AppTypography().h4,
                         textAlign: TextAlign.center,
                       ),
-                      Gap(SizeConfig.scaleHeight(16)),
+                      Gap(SizeConfig.instance().scaleHeight(16)),
                       Text(
                         "Please provide\nfollowing details for your new account",
                         textAlign: TextAlign.center,
-                        style: AppTypography.bodyLargeM
+                        style: AppTypography()
+                            .bodyLargeM
                             .copyWith(color: Colors.black26),
                       ),
-                      Gap(SizeConfig.scaleHeight(32)),
+                      Gap(SizeConfig.instance().scaleHeight(32)),
                       Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
                           "Email Address",
-                          style: AppTypography.bodyLargeM
+                          style: AppTypography()
+                              .bodyLargeM
                               .copyWith(color: Colors.black38),
                         ),
                       ),
-                      Gap(SizeConfig.scaleHeight(8)),
+                      Gap(SizeConfig.instance().scaleHeight(8)),
                       TextField(
                         decoration: InputDecoration(
                           hintText: "filllo@gmail.com",
-                          hintStyle: AppTypography.bodyMediumM.copyWith(
+                          hintStyle: AppTypography().bodyMediumM.copyWith(
                               color: Colors.black38, letterSpacing: 1.1),
                           filled: true,
                           fillColor: const Color(0xFFF9F9FF),
@@ -89,16 +91,17 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Gap(SizeConfig.scaleHeight(16)),
+                      Gap(SizeConfig.instance().scaleHeight(16)),
                       Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
                           "Password",
-                          style: AppTypography.bodyLargeM
+                          style: AppTypography()
+                              .bodyLargeM
                               .copyWith(color: Colors.black38),
                         ),
                       ),
-                      Gap(SizeConfig.scaleHeight(8)),
+                      Gap(SizeConfig.instance().scaleHeight(8)),
                       TextField(
                         decoration: InputDecoration(
                           suffixIcon: const Icon(
@@ -106,7 +109,8 @@ class LoginScreen extends StatelessWidget {
                             color: Colors.black38,
                           ),
                           hintText: "* * * * * *",
-                          hintStyle: AppTypography.bodyMediumM
+                          hintStyle: AppTypography()
+                              .bodyMediumM
                               .copyWith(color: Colors.black38),
                           filled: true,
                           fillColor: const Color(0xFFF9F9FF),
@@ -118,19 +122,21 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Gap(SizeConfig.scaleHeight(24)),
+                      Gap(SizeConfig.instance().scaleHeight(24)),
                       Text(
                         "Forget Password?",
-                        style: AppTypography.bodyMediumM
+                        style: AppTypography()
+                            .bodyMediumM
                             .copyWith(color: Colors.black38),
                       ),
-                      Gap(SizeConfig.scaleHeight(16)),
+                      Gap(SizeConfig.instance().scaleHeight(16)),
                       Text(
                         "or",
-                        style: AppTypography.bodySmallM
+                        style: AppTypography()
+                            .bodySmallM
                             .copyWith(color: Colors.black38),
                       ),
-                      Gap(SizeConfig.scaleHeight(8)),
+                      Gap(SizeConfig.instance().scaleHeight(8)),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -142,7 +148,7 @@ class LoginScreen extends StatelessWidget {
                                 Icons.apple_outlined,
                                 color: Colors.white,
                               )),
-                          Gap(SizeConfig.scaleWidth(8)),
+                          Gap(SizeConfig.instance().scaleWidth(8)),
                           CircleAvatar(
                               radius: 32,
                               backgroundColor: AppColours.dark,
@@ -153,7 +159,7 @@ class LoginScreen extends StatelessWidget {
                               )),
                         ],
                       ),
-                      Gap(SizeConfig.scaleHeight(52)),
+                      Gap(SizeConfig.instance().scaleHeight(52)),
                       OrangeButton(text: "Log In", onTap: () {}),
                     ],
                   ),

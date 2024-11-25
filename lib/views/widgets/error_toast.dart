@@ -11,5 +11,5 @@ errorToast(String msg) {
       timeInSecForIosWeb: 1,
       backgroundColor: Colors.red,
       textColor: Colors.white,
-      fontSize: SizeConfig.scaleText(16));
+      fontSize: SizeConfig.instance().scaleText(16));
 }

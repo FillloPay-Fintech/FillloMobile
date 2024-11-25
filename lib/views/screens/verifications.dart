@@ -25,8 +25,8 @@ class VerificationScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.scaleWidth(8),
-                vertical: SizeConfig.scaleHeight(8)),
+                horizontal: SizeConfig.instance().scaleWidth(8),
+                vertical: SizeConfig.instance().scaleHeight(8)),
             child: Row(
               children: [
                 const Gap(
@@ -41,13 +41,13 @@ class VerificationScreen extends StatelessWidget {
                 const Expanded(child: Gap(4)),
                 Text(
                   "Verification",
-                  style: AppTypography.h5.copyWith(color: Colors.white),
+                  style: AppTypography().h5.copyWith(color: Colors.white),
                 ),
                 const Expanded(child: Gap(4)),
               ],
             ),
           ),
-          Gap(SizeConfig.scaleHeight(32)),
+          Gap(SizeConfig.instance().scaleHeight(32)),
           Expanded(
             child: Container(
               width: double.maxFinite,
@@ -58,31 +58,32 @@ class VerificationScreen extends StatelessWidget {
                     topRight: Radius.circular(24)),
               ),
               child: Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: SizeConfig.scaleWidth(16)),
+                padding: EdgeInsets.symmetric(
+                    horizontal: SizeConfig.instance().scaleWidth(16)),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Gap(SizeConfig.scaleHeight(16)),
+                      Gap(SizeConfig.instance().scaleHeight(16)),
                       Text(
                         "Verify\n Your New Account",
-                        style: AppTypography.h4,
+                        style: AppTypography().h4,
                         textAlign: TextAlign.center,
                       ),
-                      Gap(SizeConfig.scaleHeight(16)),
+                      Gap(SizeConfig.instance().scaleHeight(16)),
                       Text(
                         "Please enter 4- digit code",
                         textAlign: TextAlign.center,
-                        style: AppTypography.bodyLargeM
+                        style: AppTypography()
+                            .bodyLargeM
                             .copyWith(color: Colors.black26),
                       ),
-                      Gap(SizeConfig.scaleHeight(32)),
+                      Gap(SizeConfig.instance().scaleHeight(32)),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            height: SizeConfig.scaleHeight(56),
-                            width: SizeConfig.scaleWidth(56),
+                            height: SizeConfig.instance().scaleHeight(56),
+                            width: SizeConfig.instance().scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -93,7 +94,7 @@ class VerificationScreen extends StatelessWidget {
                               focusNode: focusNodes[0],
                               controller: controllers[0],
                               textAlign: TextAlign.center,
-                              style: AppTypography.bodyLargeSB,
+                              style: AppTypography().bodyLargeSB,
                               maxLength: 1,
                               onChanged: (value) {
                                 if (value.isNotEmpty) {
@@ -107,10 +108,10 @@ class VerificationScreen extends StatelessWidget {
                                   border: InputBorder.none, counterText: ""),
                             ),
                           ),
-                          Gap(SizeConfig.scaleWidth(16)),
+                          Gap(SizeConfig.instance().scaleWidth(16)),
                           Container(
-                            height: SizeConfig.scaleHeight(56),
-                            width: SizeConfig.scaleWidth(56),
+                            height: SizeConfig.instance().scaleHeight(56),
+                            width: SizeConfig.instance().scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -121,7 +122,7 @@ class VerificationScreen extends StatelessWidget {
                               focusNode: focusNodes[1],
                               controller: controllers[1],
                               textAlign: TextAlign.center,
-                              style: AppTypography.bodyLargeSB,
+                              style: AppTypography().bodyLargeSB,
                               maxLength: 1,
                               onChanged: (value) {
                                 if (value.isNotEmpty) {
@@ -132,10 +133,10 @@ class VerificationScreen extends StatelessWidget {
                                   border: InputBorder.none, counterText: ""),
                             ),
                           ),
-                          Gap(SizeConfig.scaleWidth(16)),
+                          Gap(SizeConfig.instance().scaleWidth(16)),
                           Container(
-                            height: SizeConfig.scaleHeight(56),
-                            width: SizeConfig.scaleWidth(56),
+                            height: SizeConfig.instance().scaleHeight(56),
+                            width: SizeConfig.instance().scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -146,7 +147,7 @@ class VerificationScreen extends StatelessWidget {
                               focusNode: focusNodes[2],
                               controller: controllers[2],
                               textAlign: TextAlign.center,
-                              style: AppTypography.bodyLargeSB,
+                              style: AppTypography().bodyLargeSB,
                               maxLength: 1,
                               onChanged: (value) {
                                 if (value.isNotEmpty) {
@@ -157,10 +158,10 @@ class VerificationScreen extends StatelessWidget {
                                   border: InputBorder.none, counterText: ""),
                             ),
                           ),
-                          Gap(SizeConfig.scaleWidth(16)),
+                          Gap(SizeConfig.instance().scaleWidth(16)),
                           Container(
-                            height: SizeConfig.scaleHeight(56),
-                            width: SizeConfig.scaleWidth(56),
+                            height: SizeConfig.instance().scaleHeight(56),
+                            width: SizeConfig.instance().scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -172,7 +173,7 @@ class VerificationScreen extends StatelessWidget {
                               controller: controllers[3],
                               textAlign: TextAlign.center,
                               maxLength: 1,
-                              style: AppTypography.bodyLargeSB,
+                              style: AppTypography().bodyLargeSB,
                               onChanged: (value) {
                                 focusNodes[3].unfocus();
                               },
@@ -182,24 +183,26 @@ class VerificationScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Gap(SizeConfig.scaleHeight(50)),
+                      Gap(SizeConfig.instance().scaleHeight(50)),
                       Text(
                         "Didn't receive the code?",
-                        style: AppTypography.bodyMediumM
+                        style: AppTypography()
+                            .bodyMediumM
                             .copyWith(color: Colors.black26),
                       ),
-                      Gap(SizeConfig.scaleHeight(16)),
+                      Gap(SizeConfig.instance().scaleHeight(16)),
                       Text.rich(TextSpan(children: [
                         TextSpan(
                             text: "Resend in  ",
-                            style: AppTypography.bodyLargeM),
+                            style: AppTypography().bodyLargeM),
                         TextSpan(
                             text: "00:45",
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
                                 errorToast("Cannot resend now");
                               },
-                            style: AppTypography.bodyLargeM
+                            style: AppTypography()
+                                .bodyLargeM
                                 .copyWith(color: AppColours.brightOrange)),
                       ])),
                       const AspectRatio(aspectRatio: 1.45),

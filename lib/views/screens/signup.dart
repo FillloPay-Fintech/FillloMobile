@@ -21,8 +21,8 @@ class SignupScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.scaleWidth(8),
-                vertical: SizeConfig.scaleHeight(8)),
+                horizontal: SizeConfig.instance().scaleWidth(8),
+                vertical: SizeConfig.instance().scaleHeight(8)),
             child: Row(
               children: [
                 GestureDetector(
@@ -34,13 +34,13 @@ class SignupScreen extends StatelessWidget {
                 const Expanded(child: Gap(4)),
                 Text(
                   "Sign Up",
-                  style: AppTypography.h5.copyWith(color: Colors.white),
+                  style: AppTypography().h5.copyWith(color: Colors.white),
                 ),
                 const Expanded(child: Gap(4)),
               ],
             ),
           ),
-          Gap(SizeConfig.scaleHeight(32)),
+          Gap(SizeConfig.instance().scaleHeight(32)),
           Expanded(
             child: Container(
               width: double.maxFinite,
@@ -51,25 +51,29 @@ class SignupScreen extends StatelessWidget {
                     topRight: Radius.circular(24)),
               ),
               child: Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: SizeConfig.scaleWidth(16)),
+                padding: EdgeInsets.symmetric(
+                    horizontal: SizeConfig.instance().scaleWidth(16)),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Gap(SizeConfig.scaleHeight(16)),
-                      Text(
-                        "Welcome\n Choose Account Type",
-                        style: AppTypography.h4,
-                        textAlign: TextAlign.center,
+                      Gap(SizeConfig.instance().scaleHeight(16)),
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          "Welcome\nChoose Account Type",
+                          style: AppTypography().h4,
+                          textAlign: TextAlign.center,
+                        ),
                       ),
-                      Gap(SizeConfig.scaleHeight(16)),
+                      Gap(SizeConfig.instance().scaleHeight(16)),
                       Text(
                         "Please select account type",
                         textAlign: TextAlign.center,
-                        style: AppTypography.bodyLargeM
+                        style: AppTypography()
+                            .bodyLargeM
                             .copyWith(color: Colors.black26),
                       ),
-                      Gap(SizeConfig.scaleHeight(32)),
+                      Gap(SizeConfig.instance().scaleHeight(32)),
                       GestureDetector(
                         onTap: () {
                           Provider.of<SignUpController>(context, listen: false)
@@ -79,8 +83,9 @@ class SignupScreen extends StatelessWidget {
                             builder: (context, value, a) {
                           return Container(
                             padding: EdgeInsets.symmetric(
-                                vertical: SizeConfig.scaleHeight(12),
-                                horizontal: SizeConfig.scaleWidth(16)),
+                                vertical: SizeConfig.instance().scaleHeight(12),
+                                horizontal:
+                                    SizeConfig.instance().scaleWidth(16)),
                             decoration: BoxDecoration(
                                 color: value.accountType == AccountType.personal
                                     ? AppColours.brightOrange
@@ -93,17 +98,18 @@ class SignupScreen extends StatelessWidget {
                                   backgroundColor: Colors.white,
                                   child: Icon(Icons.person_2_rounded),
                                 ),
-                                Gap(SizeConfig.scaleWidth(16)),
+                                Gap(SizeConfig.instance().scaleWidth(16)),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       "Personal Account",
-                                      style: AppTypography.bodyMediumM,
+                                      style: AppTypography().bodyMediumM,
                                     ),
                                     Text(
                                         "Send,spend, and receive money\naround the world for less",
-                                        style: AppTypography.bodySmallM
+                                        style: AppTypography()
+                                            .bodySmallM
                                             .copyWith(
                                                 color: value.accountType ==
                                                         AccountType.personal
@@ -114,14 +120,14 @@ class SignupScreen extends StatelessWidget {
                                 const Expanded(child: Gap(2)),
                                 Icon(
                                   Icons.arrow_right,
-                                  size: SizeConfig.scaleHeight(32),
+                                  size: SizeConfig.instance().scaleHeight(32),
                                 )
                               ],
                             ),
                           );
                         }),
                       ),
-                      Gap(SizeConfig.scaleHeight(32)),
+                      Gap(SizeConfig.instance().scaleHeight(32)),
                       GestureDetector(
                         onTap: () {
                           Provider.of<SignUpController>(context, listen: false)
@@ -131,8 +137,9 @@ class SignupScreen extends StatelessWidget {
                             builder: (context, value, _) {
                           return Container(
                             padding: EdgeInsets.symmetric(
-                                vertical: SizeConfig.scaleHeight(12),
-                                horizontal: SizeConfig.scaleWidth(16)),
+                                vertical: SizeConfig.instance().scaleHeight(12),
+                                horizontal:
+                                    SizeConfig.instance().scaleWidth(16)),
                             decoration: BoxDecoration(
                                 color: value.accountType == AccountType.business
                                     ? AppColours.brightOrange
@@ -145,28 +152,30 @@ class SignupScreen extends StatelessWidget {
                                   backgroundColor: Colors.white,
                                   child: Icon(Icons.person_2_rounded),
                                 ),
-                                Gap(SizeConfig.scaleWidth(16)),
+                                Gap(SizeConfig.instance().scaleWidth(16)),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       "Business Account",
-                                      style: AppTypography.bodyMediumM,
+                                      style: AppTypography().bodyMediumM,
                                     ),
                                     Text(
                                       "Do business transaction\ninternationally",
-                                      style: AppTypography.bodySmallM.copyWith(
-                                          color: value.accountType ==
-                                                  AccountType.business
-                                              ? Colors.white60
-                                              : Colors.black38),
+                                      style: AppTypography()
+                                          .bodySmallM
+                                          .copyWith(
+                                              color: value.accountType ==
+                                                      AccountType.business
+                                                  ? Colors.white60
+                                                  : Colors.black38),
                                     )
                                   ],
                                 ),
                                 const Expanded(child: Gap(2)),
                                 Icon(
                                   Icons.arrow_right,
-                                  size: SizeConfig.scaleHeight(32),
+                                  size: SizeConfig.instance().scaleHeight(32),
                                 )
                               ],
                             ),

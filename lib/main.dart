@@ -16,7 +16,6 @@ class FillloMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig.init(context);
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
@@ -34,7 +33,15 @@ class FillloMobile extends StatelessWidget {
           scaffoldBackgroundColor: AppColours.dark,
           fontFamily: "SF_DISPLAY_PRO",
         ),
-        home: const Onboarding1Screen(),
+        home: FutureBuilder(
+            future: SizeConfig.instance().init(context),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.done) {
+                return const Onboarding1Screen();
+              } else {
+                return Container();
+              }
+            }),
       ),
     );
   }

@@ -18,8 +18,8 @@ class CreateAccountScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.scaleWidth(8),
-                vertical: SizeConfig.scaleHeight(8)),
+                horizontal: SizeConfig.instance().scaleWidth(8),
+                vertical: SizeConfig.instance().scaleHeight(8)),
             child: Row(
               children: [
                 GestureDetector(
@@ -31,13 +31,13 @@ class CreateAccountScreen extends StatelessWidget {
                 const Expanded(child: Gap(4)),
                 Text(
                   "Create Account",
-                  style: AppTypography.h5.copyWith(color: Colors.white),
+                  style: AppTypography().h5.copyWith(color: Colors.white),
                 ),
                 const Expanded(child: Gap(4)),
               ],
             ),
           ),
-          Gap(SizeConfig.scaleHeight(32)),
+          Gap(SizeConfig.instance().scaleHeight(32)),
           Expanded(
             child: Container(
               width: double.maxFinite,
@@ -48,40 +48,42 @@ class CreateAccountScreen extends StatelessWidget {
                     topRight: Radius.circular(24)),
               ),
               child: Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: SizeConfig.scaleWidth(16)),
+                padding: EdgeInsets.symmetric(
+                    horizontal: SizeConfig.instance().scaleWidth(16)),
                 child: SingleChildScrollView(
                   child: Form(
                     key: signpFormKey,
                     child: Column(
                       children: [
-                        Gap(SizeConfig.scaleHeight(16)),
+                        Gap(SizeConfig.instance().scaleHeight(16)),
                         Text(
                           "Create New Account",
-                          style: AppTypography.h4,
+                          style: AppTypography().h4,
                           textAlign: TextAlign.center,
                         ),
-                        Gap(SizeConfig.scaleHeight(16)),
+                        Gap(SizeConfig.instance().scaleHeight(16)),
                         Text(
                           "Please provide\nfollowing information here",
                           textAlign: TextAlign.center,
-                          style: AppTypography.bodyLargeM
+                          style: AppTypography()
+                              .bodyLargeM
                               .copyWith(color: Colors.black26),
                         ),
-                        Gap(SizeConfig.scaleHeight(32)),
+                        Gap(SizeConfig.instance().scaleHeight(32)),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
                             "Phone Number",
-                            style: AppTypography.bodyLargeM
+                            style: AppTypography()
+                                .bodyLargeM
                                 .copyWith(color: Colors.black38),
                           ),
                         ),
-                        Gap(SizeConfig.scaleHeight(8)),
+                        Gap(SizeConfig.instance().scaleHeight(8)),
                         TextFormField(
                           decoration: InputDecoration(
                             hintText: "+1 236098678",
-                            hintStyle: AppTypography.bodyMediumM.copyWith(
+                            hintStyle: AppTypography().bodyMediumM.copyWith(
                                 color: Colors.black38, letterSpacing: 1.1),
                             filled: true,
                             fillColor: const Color(0xFFF9F9FF),
@@ -96,20 +98,21 @@ class CreateAccountScreen extends StatelessWidget {
                           ),
                           keyboardType: TextInputType.phone,
                         ),
-                        Gap(SizeConfig.scaleHeight(16)),
+                        Gap(SizeConfig.instance().scaleHeight(16)),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
                             "Email Address",
-                            style: AppTypography.bodyLargeM
+                            style: AppTypography()
+                                .bodyLargeM
                                 .copyWith(color: Colors.black38),
                           ),
                         ),
-                        Gap(SizeConfig.scaleHeight(8)),
+                        Gap(SizeConfig.instance().scaleHeight(8)),
                         TextFormField(
                             decoration: InputDecoration(
                               hintText: "filllo@gmail.com",
-                              hintStyle: AppTypography.bodyMediumM.copyWith(
+                              hintStyle: AppTypography().bodyMediumM.copyWith(
                                   color: Colors.black38, letterSpacing: 1.1),
                               filled: true,
                               fillColor: const Color(0xFFF9F9FF),
@@ -121,16 +124,17 @@ class CreateAccountScreen extends StatelessWidget {
                               ),
                             ),
                             keyboardType: TextInputType.emailAddress),
-                        Gap(SizeConfig.scaleHeight(16)),
+                        Gap(SizeConfig.instance().scaleHeight(16)),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
                             "Password",
-                            style: AppTypography.bodyLargeM
+                            style: AppTypography()
+                                .bodyLargeM
                                 .copyWith(color: Colors.black38),
                           ),
                         ),
-                        Gap(SizeConfig.scaleHeight(8)),
+                        Gap(SizeConfig.instance().scaleHeight(8)),
                         TextFormField(
                           decoration: InputDecoration(
                             suffixIcon: const Icon(
@@ -138,7 +142,8 @@ class CreateAccountScreen extends StatelessWidget {
                               color: Colors.black38,
                             ),
                             hintText: "* * * * * *",
-                            hintStyle: AppTypography.bodyMediumM
+                            hintStyle: AppTypography()
+                                .bodyMediumM
                                 .copyWith(color: Colors.black38),
                             filled: true,
                             fillColor: const Color(0xFFF9F9FF),
@@ -150,16 +155,17 @@ class CreateAccountScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Gap(SizeConfig.scaleHeight(16)),
+                        Gap(SizeConfig.instance().scaleHeight(16)),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
                             "Confirm Password",
-                            style: AppTypography.bodyLargeM
+                            style: AppTypography()
+                                .bodyLargeM
                                 .copyWith(color: Colors.black38),
                           ),
                         ),
-                        Gap(SizeConfig.scaleHeight(8)),
+                        Gap(SizeConfig.instance().scaleHeight(8)),
                         TextFormField(
                           decoration: InputDecoration(
                             suffixIcon: const Icon(
@@ -167,7 +173,8 @@ class CreateAccountScreen extends StatelessWidget {
                               color: Colors.black38,
                             ),
                             hintText: "* * * * * *",
-                            hintStyle: AppTypography.bodyMediumM
+                            hintStyle: AppTypography()
+                                .bodyMediumM
                                 .copyWith(color: Colors.black38),
                             filled: true,
                             fillColor: const Color(0xFFF9F9FF),
@@ -179,7 +186,7 @@ class CreateAccountScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Gap(SizeConfig.scaleHeight(32)),
+                        Gap(SizeConfig.instance().scaleHeight(32)),
                         OrangeButton(
                             text: "Create Account",
                             onTap: () {

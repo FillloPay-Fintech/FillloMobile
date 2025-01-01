@@ -1,4 +1,4 @@
-import 'package:filllo_mobile/controllers/sign_up_controller.dart';
+import 'package:filllo_mobile/view_model/sign_up_controller.dart';
 import 'package:filllo_mobile/views/screens/create_account.dart';
 
 import '../utils/utils.dart';

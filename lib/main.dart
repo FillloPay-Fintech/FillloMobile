@@ -1,6 +1,6 @@
-import 'package:filllo_mobile/controllers/onboarding_controller.dart';
-import 'package:filllo_mobile/controllers/screenlock_controller.dart';
-import 'package:filllo_mobile/controllers/sign_up_controller.dart';
+import 'package:filllo_mobile/view_model/onboarding_controller.dart';
+import 'package:filllo_mobile/view_model/screenlock_controller.dart';
+import 'package:filllo_mobile/view_model/sign_up_controller.dart';
 import 'package:filllo_mobile/views/screens/onboarding1.dart';
 
 import './views/utils/utils.dart';

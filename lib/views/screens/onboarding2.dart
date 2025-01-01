@@ -1,4 +1,4 @@
-import 'package:filllo_mobile/controllers/onboarding_controller.dart';
+import 'package:filllo_mobile/view_model/onboarding_controller.dart';
 import 'package:filllo_mobile/views/screens/onboarding3.dart';
 
 import '../utils/utils.dart';

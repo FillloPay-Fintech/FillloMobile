@@ -1,4 +1,4 @@
-import 'package:filllo_mobile/controllers/screenlock_controller.dart';
+import 'package:filllo_mobile/view_model/screenlock_controller.dart';
 import 'package:filllo_mobile/views/screens/faceid_screen.dart';
 import 'package:filllo_mobile/views/screens/fingerprint_screen.dart';
 import 'package:filllo_mobile/views/screens/get_started.dart';

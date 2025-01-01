@@ -21,8 +21,8 @@ class SignupScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.instance().scaleWidth(8),
-                vertical: SizeConfig.instance().scaleHeight(8)),
+                horizontal: SizeConfig.instance.scaleWidth(8),
+                vertical: SizeConfig.instance.scaleHeight(8)),
             child: Row(
               children: [
                 GestureDetector(
@@ -40,7 +40,7 @@ class SignupScreen extends StatelessWidget {
               ],
             ),
           ),
-          Gap(SizeConfig.instance().scaleHeight(32)),
+          Gap(SizeConfig.instance.scaleHeight(32)),
           Expanded(
             child: Container(
               width: double.maxFinite,
@@ -52,11 +52,11 @@ class SignupScreen extends StatelessWidget {
               ),
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: SizeConfig.instance().scaleWidth(16)),
+                    horizontal: SizeConfig.instance.scaleWidth(16)),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Gap(SizeConfig.instance().scaleHeight(16)),
+                      Gap(SizeConfig.instance.scaleHeight(16)),
                       FittedBox(
                         fit: BoxFit.scaleDown,
                         child: Text(
@@ -65,7 +65,7 @@ class SignupScreen extends StatelessWidget {
                           textAlign: TextAlign.center,
                         ),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(16)),
+                      Gap(SizeConfig.instance.scaleHeight(16)),
                       Text(
                         "Please select account type",
                         textAlign: TextAlign.center,
@@ -73,7 +73,7 @@ class SignupScreen extends StatelessWidget {
                             .bodyLargeM
                             .copyWith(color: Colors.black26),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(32)),
+                      Gap(SizeConfig.instance.scaleHeight(32)),
                       GestureDetector(
                         onTap: () {
                           Provider.of<SignUpController>(context, listen: false)
@@ -83,9 +83,8 @@ class SignupScreen extends StatelessWidget {
                             builder: (context, value, a) {
                           return Container(
                             padding: EdgeInsets.symmetric(
-                                vertical: SizeConfig.instance().scaleHeight(12),
-                                horizontal:
-                                    SizeConfig.instance().scaleWidth(16)),
+                                vertical: SizeConfig.instance.scaleHeight(12),
+                                horizontal: SizeConfig.instance.scaleWidth(16)),
                             decoration: BoxDecoration(
                                 color: value.accountType == AccountType.personal
                                     ? AppColours.brightOrange
@@ -98,7 +97,7 @@ class SignupScreen extends StatelessWidget {
                                   backgroundColor: Colors.white,
                                   child: Icon(Icons.person_2_rounded),
                                 ),
-                                Gap(SizeConfig.instance().scaleWidth(16)),
+                                Gap(SizeConfig.instance.scaleWidth(16)),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -120,14 +119,14 @@ class SignupScreen extends StatelessWidget {
                                 const Expanded(child: Gap(2)),
                                 Icon(
                                   Icons.arrow_right,
-                                  size: SizeConfig.instance().scaleHeight(32),
+                                  size: SizeConfig.instance.scaleHeight(32),
                                 )
                               ],
                             ),
                           );
                         }),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(32)),
+                      Gap(SizeConfig.instance.scaleHeight(32)),
                       GestureDetector(
                         onTap: () {
                           Provider.of<SignUpController>(context, listen: false)
@@ -137,9 +136,8 @@ class SignupScreen extends StatelessWidget {
                             builder: (context, value, _) {
                           return Container(
                             padding: EdgeInsets.symmetric(
-                                vertical: SizeConfig.instance().scaleHeight(12),
-                                horizontal:
-                                    SizeConfig.instance().scaleWidth(16)),
+                                vertical: SizeConfig.instance.scaleHeight(12),
+                                horizontal: SizeConfig.instance.scaleWidth(16)),
                             decoration: BoxDecoration(
                                 color: value.accountType == AccountType.business
                                     ? AppColours.brightOrange
@@ -152,7 +150,7 @@ class SignupScreen extends StatelessWidget {
                                   backgroundColor: Colors.white,
                                   child: Icon(Icons.person_2_rounded),
                                 ),
-                                Gap(SizeConfig.instance().scaleWidth(16)),
+                                Gap(SizeConfig.instance.scaleWidth(16)),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -175,7 +173,7 @@ class SignupScreen extends StatelessWidget {
                                 const Expanded(child: Gap(2)),
                                 Icon(
                                   Icons.arrow_right,
-                                  size: SizeConfig.instance().scaleHeight(32),
+                                  size: SizeConfig.instance.scaleHeight(32),
                                 )
                               ],
                             ),

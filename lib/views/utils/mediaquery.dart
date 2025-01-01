@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 
 class SizeConfig {
-  SizeConfig.instance();
-  static final SizeConfig _instance = SizeConfig.instance();
-  factory SizeConfig() => _instance;
+  SizeConfig._internal();
+  static final SizeConfig _instance = SizeConfig._internal();
+  static SizeConfig get instance => _instance;
 
   static double _screenWidth = 0;
   static double _screenHeight = 0;

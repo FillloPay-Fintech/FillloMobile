@@ -16,7 +16,7 @@ class Onboarding3Screen extends StatelessWidget {
           alignment: Alignment.center,
           child: Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.instance().scaleWidth(16)),
+                horizontal: SizeConfig.instance.scaleWidth(16)),
             child: Column(
               children: [
                 const Expanded(child: Gap(8)),
@@ -27,7 +27,7 @@ class Onboarding3Screen extends StatelessWidget {
                     "assets/images/wallet-filllo.png",
                   ),
                 ),
-                Gap(SizeConfig.instance().scaleHeight(16)),
+                Gap(SizeConfig.instance.scaleHeight(16)),
                 Text(
                   "Filllo Pay",
                   style: AppTypography().h4.copyWith(color: Colors.white),
@@ -39,14 +39,14 @@ class Onboarding3Screen extends StatelessWidget {
                     builder: (context) => const LoginScreen(),
                   )),
                 ),
-                Gap(SizeConfig.instance().scaleHeight(8)),
+                Gap(SizeConfig.instance.scaleHeight(8)),
                 OrangeButton(
                   text: "Create New Account",
                   onTap: () => Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const SignupScreen(),
                   )),
                 ),
-                Gap(SizeConfig.instance().scaleHeight(16)),
+                Gap(SizeConfig.instance.scaleHeight(16)),
               ],
             ),
           ),

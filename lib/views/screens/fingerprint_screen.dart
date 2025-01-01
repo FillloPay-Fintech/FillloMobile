@@ -19,8 +19,8 @@ class FingerprintScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.instance().scaleWidth(8),
-                vertical: SizeConfig.instance().scaleHeight(8)),
+                horizontal: SizeConfig.instance.scaleWidth(8),
+                vertical: SizeConfig.instance.scaleHeight(8)),
             child: Row(
               children: [
                 GestureDetector(
@@ -38,7 +38,7 @@ class FingerprintScreen extends StatelessWidget {
               ],
             ),
           ),
-          Gap(SizeConfig.instance().scaleHeight(32)),
+          Gap(SizeConfig.instance.scaleHeight(32)),
           Expanded(
             child: Container(
               width: double.maxFinite,
@@ -50,11 +50,11 @@ class FingerprintScreen extends StatelessWidget {
               ),
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: SizeConfig.instance().scaleWidth(16)),
+                    horizontal: SizeConfig.instance.scaleWidth(16)),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Gap(SizeConfig.instance().scaleHeight(40)),
+                      Gap(SizeConfig.instance.scaleHeight(40)),
 
                       Container(
                           height: 200,
@@ -76,7 +76,7 @@ class FingerprintScreen extends StatelessWidget {
                         style: AppTypography().h4,
                         textAlign: TextAlign.center,
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(16)),
+                      Gap(SizeConfig.instance.scaleHeight(16)),
                       Text(
                         "First position your finger\n in your phone fingerprint sensor",
                         textAlign: TextAlign.center,
@@ -84,12 +84,12 @@ class FingerprintScreen extends StatelessWidget {
                             .bodyLargeM
                             .copyWith(color: Colors.black26),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(32)),
+                      Gap(SizeConfig.instance.scaleHeight(32)),
 
                       const AspectRatio(
                         aspectRatio: 3.5,
                       ),
-                      // Gap(SizeConfig.instance().scaleHeight(220)),
+                      // Gap(SizeConfig.instance.scaleHeight(220)),
                       Consumer<SignUpController>(builder: (context, value, _) {
                         return OrangeButton(text: "Continue", onTap: () {});
                       }),

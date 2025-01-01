@@ -14,8 +14,8 @@ class BlackButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         padding: EdgeInsets.symmetric(
-          vertical: SizeConfig.instance().scaleHeight(18),
-          horizontal: SizeConfig.instance().scaleHeight(82),
+          vertical: SizeConfig.instance.scaleHeight(18),
+          horizontal: SizeConfig.instance.scaleHeight(82),
         ),
         decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(80)),

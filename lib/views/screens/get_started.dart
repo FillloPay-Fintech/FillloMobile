@@ -50,7 +50,7 @@ class CheckIcon extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     Paint checkPaint = Paint()
       ..style = PaintingStyle.stroke
-      ..strokeWidth = SizeConfig.instance().scaleWidth(25)
+      ..strokeWidth = SizeConfig.instance.scaleWidth(25)
       ..strokeCap = StrokeCap.round
       ..color = Colors.green.shade300;
 
@@ -75,35 +75,33 @@ class CheckIcon extends CustomPainter {
     //left hand side circles
     canvas.drawCircle(
         Offset(size.width * 1.05, center.dy * 0.3),
-        SizeConfig.instance().scaleWidth(8),
+        SizeConfig.instance.scaleWidth(8),
         circlePaint..color = AppColours.brightOrange);
     canvas.drawCircle(
         Offset(size.width * 0.95, size.height * -0.15),
-        SizeConfig.instance().scaleWidth(7),
+        SizeConfig.instance.scaleWidth(7),
         circlePaint..color = Colors.green.shade300);
     canvas.drawCircle(
         Offset(size.width * 1.05, size.height * 0.85),
-        SizeConfig.instance().scaleWidth(6),
+        SizeConfig.instance.scaleWidth(6),
         circlePaint..color = AppColours.brightOrange);
-    canvas.drawCircle(
-        Offset(size.width * 1.15, size.height * 1.1),
-        SizeConfig.instance().scaleWidth(12),
-        circlePaint..color = Colors.white);
+    canvas.drawCircle(Offset(size.width * 1.15, size.height * 1.1),
+        SizeConfig.instance.scaleWidth(12), circlePaint..color = Colors.white);
 
     //right hand side circles
     canvas.drawCircle(
         Offset(size.width * -0.05, center.dy * 0.3),
-        SizeConfig.instance().scaleWidth(16),
+        SizeConfig.instance.scaleWidth(16),
         circlePaint..color = AppColours.brightOrange);
     canvas.drawCircle(Offset(size.width * -0.23, size.height * 0.3),
-        SizeConfig.instance().scaleWidth(7), circlePaint..color = Colors.white);
+        SizeConfig.instance.scaleWidth(7), circlePaint..color = Colors.white);
     canvas.drawCircle(
         Offset(size.width * 0.13, size.height * 0.85),
-        SizeConfig.instance().scaleWidth(6),
+        SizeConfig.instance.scaleWidth(6),
         circlePaint..color = Colors.green.shade300);
     canvas.drawCircle(
         Offset(size.width * -0.28, size.height * 1.1),
-        SizeConfig.instance().scaleWidth(6),
+        SizeConfig.instance.scaleWidth(6),
         circlePaint..color = AppColours.brightOrange);
   }
 

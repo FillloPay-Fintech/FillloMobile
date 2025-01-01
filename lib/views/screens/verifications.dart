@@ -25,8 +25,8 @@ class VerificationScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.instance().scaleWidth(8),
-                vertical: SizeConfig.instance().scaleHeight(8)),
+                horizontal: SizeConfig.instance.scaleWidth(8),
+                vertical: SizeConfig.instance.scaleHeight(8)),
             child: Row(
               children: [
                 const Gap(
@@ -47,7 +47,7 @@ class VerificationScreen extends StatelessWidget {
               ],
             ),
           ),
-          Gap(SizeConfig.instance().scaleHeight(32)),
+          Gap(SizeConfig.instance.scaleHeight(32)),
           Expanded(
             child: Container(
               width: double.maxFinite,
@@ -59,17 +59,17 @@ class VerificationScreen extends StatelessWidget {
               ),
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: SizeConfig.instance().scaleWidth(16)),
+                    horizontal: SizeConfig.instance.scaleWidth(16)),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Gap(SizeConfig.instance().scaleHeight(16)),
+                      Gap(SizeConfig.instance.scaleHeight(16)),
                       Text(
                         "Verify\n Your New Account",
                         style: AppTypography().h4,
                         textAlign: TextAlign.center,
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(16)),
+                      Gap(SizeConfig.instance.scaleHeight(16)),
                       Text(
                         "Please enter 4- digit code",
                         textAlign: TextAlign.center,
@@ -77,13 +77,13 @@ class VerificationScreen extends StatelessWidget {
                             .bodyLargeM
                             .copyWith(color: Colors.black26),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(32)),
+                      Gap(SizeConfig.instance.scaleHeight(32)),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            height: SizeConfig.instance().scaleHeight(56),
-                            width: SizeConfig.instance().scaleWidth(56),
+                            height: SizeConfig.instance.scaleHeight(56),
+                            width: SizeConfig.instance.scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -108,10 +108,10 @@ class VerificationScreen extends StatelessWidget {
                                   border: InputBorder.none, counterText: ""),
                             ),
                           ),
-                          Gap(SizeConfig.instance().scaleWidth(16)),
+                          Gap(SizeConfig.instance.scaleWidth(16)),
                           Container(
-                            height: SizeConfig.instance().scaleHeight(56),
-                            width: SizeConfig.instance().scaleWidth(56),
+                            height: SizeConfig.instance.scaleHeight(56),
+                            width: SizeConfig.instance.scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -133,10 +133,10 @@ class VerificationScreen extends StatelessWidget {
                                   border: InputBorder.none, counterText: ""),
                             ),
                           ),
-                          Gap(SizeConfig.instance().scaleWidth(16)),
+                          Gap(SizeConfig.instance.scaleWidth(16)),
                           Container(
-                            height: SizeConfig.instance().scaleHeight(56),
-                            width: SizeConfig.instance().scaleWidth(56),
+                            height: SizeConfig.instance.scaleHeight(56),
+                            width: SizeConfig.instance.scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -158,10 +158,10 @@ class VerificationScreen extends StatelessWidget {
                                   border: InputBorder.none, counterText: ""),
                             ),
                           ),
-                          Gap(SizeConfig.instance().scaleWidth(16)),
+                          Gap(SizeConfig.instance.scaleWidth(16)),
                           Container(
-                            height: SizeConfig.instance().scaleHeight(56),
-                            width: SizeConfig.instance().scaleWidth(56),
+                            height: SizeConfig.instance.scaleHeight(56),
+                            width: SizeConfig.instance.scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -183,14 +183,14 @@ class VerificationScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(50)),
+                      Gap(SizeConfig.instance.scaleHeight(50)),
                       Text(
                         "Didn't receive the code?",
                         style: AppTypography()
                             .bodyMediumM
                             .copyWith(color: Colors.black26),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(16)),
+                      Gap(SizeConfig.instance.scaleHeight(16)),
                       Text.rich(TextSpan(children: [
                         TextSpan(
                             text: "Resend in  ",

@@ -34,7 +34,7 @@ class FillloMobile extends StatelessWidget {
           fontFamily: "SF_DISPLAY_PRO",
         ),
         home: FutureBuilder(
-            future: SizeConfig.instance().init(context),
+            future: SizeConfig.instance.init(context),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
                 return const Onboarding1Screen();

@@ -1,3 +1,5 @@
+import 'package:filllo_mobile/views/screens/home.dart';
+
 import '../utils/utils.dart';
 
 import 'package:filllo_mobile/views/widgets/orange_button.dart';
@@ -140,7 +142,7 @@ class LoginScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          CircleAvatar(
+                          const CircleAvatar(
                               radius: 32,
                               backgroundColor: AppColours.dark,
                               child: Icon(
@@ -149,7 +151,7 @@ class LoginScreen extends StatelessWidget {
                                 color: Colors.white,
                               )),
                           Gap(SizeConfig.instance.scaleWidth(8)),
-                          CircleAvatar(
+                          const CircleAvatar(
                               radius: 32,
                               backgroundColor: AppColours.dark,
                               child: Icon(
@@ -160,7 +162,16 @@ class LoginScreen extends StatelessWidget {
                         ],
                       ),
                       Gap(SizeConfig.instance.scaleHeight(52)),
-                      OrangeButton(text: "Log In", onTap: () {}),
+                      OrangeButton(
+                          text: "Log In",
+                          onTap: () {
+                            Navigator.of(context).pushAndRemoveUntil(
+                              MaterialPageRoute(
+                                builder: (context) => const Home(),
+                              ),
+                              (route) => false,
+                            );
+                          }),
                     ],
                   ),
                 ),

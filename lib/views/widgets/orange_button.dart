@@ -13,7 +13,7 @@ class OrangeButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: SizeConfig.instance().scaleHeight(61),
+        height: SizeConfig.instance.scaleHeight(61),
         width: double.maxFinite,
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(80)),

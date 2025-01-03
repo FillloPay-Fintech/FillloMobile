@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:filllo_mobile/controllers/sign_up_controller.dart';
+import 'package:filllo_mobile/view_model/sign_up_controller.dart';
 import '../utils/utils.dart';
 import 'package:filllo_mobile/views/widgets/orange_button.dart';
 import 'package:flutter/material.dart';
@@ -19,8 +19,8 @@ class FaceidScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.instance().scaleWidth(8),
-                vertical: SizeConfig.instance().scaleHeight(8)),
+                horizontal: SizeConfig.instance.scaleWidth(8),
+                vertical: SizeConfig.instance.scaleHeight(8)),
             child: Row(
               children: [
                 GestureDetector(
@@ -38,7 +38,7 @@ class FaceidScreen extends StatelessWidget {
               ],
             ),
           ),
-          Gap(SizeConfig.instance().scaleHeight(32)),
+          Gap(SizeConfig.instance.scaleHeight(32)),
           Expanded(
             child: Container(
               width: double.maxFinite,
@@ -50,10 +50,10 @@ class FaceidScreen extends StatelessWidget {
               ),
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: SizeConfig.instance().scaleWidth(16)),
+                    horizontal: SizeConfig.instance.scaleWidth(16)),
                 child: Column(
                   children: [
-                    Gap(SizeConfig.instance().scaleHeight(40)),
+                    Gap(SizeConfig.instance.scaleHeight(40)),
 
                     Stack(
                       alignment: Alignment.center,
@@ -86,7 +86,7 @@ class FaceidScreen extends StatelessWidget {
                       style: AppTypography().h4,
                       textAlign: TextAlign.center,
                     ),
-                    Gap(SizeConfig.instance().scaleHeight(16)),
+                    Gap(SizeConfig.instance.scaleHeight(16)),
                     Text(
                       "First position your face in the camera frame.\nThen move your head in a circle to show all angles of your face ",
                       textAlign: TextAlign.center,
@@ -98,7 +98,7 @@ class FaceidScreen extends StatelessWidget {
                     const AspectRatio(
                       aspectRatio: 3.2,
                     ),
-                    // Gap(SizeConfig.instance().scaleHeight(220)),
+                    // Gap(SizeConfig.instance.scaleHeight(220)),
                     Consumer<SignUpController>(builder: (context, value, _) {
                       return OrangeButton(text: "Continue", onTap: () {});
                     }),

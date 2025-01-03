@@ -22,8 +22,8 @@ class PincodeScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.instance().scaleWidth(8),
-                vertical: SizeConfig.instance().scaleHeight(8)),
+                horizontal: SizeConfig.instance.scaleWidth(8),
+                vertical: SizeConfig.instance.scaleHeight(8)),
             child: Row(
               children: [
                 const Gap(
@@ -44,7 +44,7 @@ class PincodeScreen extends StatelessWidget {
               ],
             ),
           ),
-          Gap(SizeConfig.instance().scaleHeight(32)),
+          Gap(SizeConfig.instance.scaleHeight(32)),
           Expanded(
             child: Container(
               width: double.maxFinite,
@@ -58,20 +58,20 @@ class PincodeScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Gap(SizeConfig.instance().scaleHeight(16)),
+                    Gap(SizeConfig.instance.scaleHeight(16)),
                     Padding(
                       padding: EdgeInsets.symmetric(
-                          horizontal: SizeConfig.instance().scaleWidth(16)),
+                          horizontal: SizeConfig.instance.scaleWidth(16)),
                       child: Text(
                         "Set Pin Code",
                         style: AppTypography().h4,
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    Gap(SizeConfig.instance().scaleHeight(8)),
+                    Gap(SizeConfig.instance.scaleHeight(8)),
                     Padding(
                       padding: EdgeInsets.symmetric(
-                          horizontal: SizeConfig.instance().scaleWidth(16)),
+                          horizontal: SizeConfig.instance.scaleWidth(16)),
                       child: Text(
                         "Set 4 digit pin code to unlock app",
                         textAlign: TextAlign.center,
@@ -80,16 +80,16 @@ class PincodeScreen extends StatelessWidget {
                             .copyWith(color: Colors.black26),
                       ),
                     ),
-                    Gap(SizeConfig.instance().scaleHeight(32)),
+                    Gap(SizeConfig.instance.scaleHeight(32)),
                     Padding(
                       padding: EdgeInsets.symmetric(
-                          horizontal: SizeConfig.instance().scaleWidth(16)),
+                          horizontal: SizeConfig.instance.scaleWidth(16)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
-                            height: SizeConfig.instance().scaleHeight(56),
-                            width: SizeConfig.instance().scaleWidth(56),
+                            height: SizeConfig.instance.scaleHeight(56),
+                            width: SizeConfig.instance.scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -125,10 +125,10 @@ class PincodeScreen extends StatelessWidget {
                                   counterText: ""),
                             ),
                           ),
-                          Gap(SizeConfig.instance().scaleWidth(16)),
+                          Gap(SizeConfig.instance.scaleWidth(16)),
                           Container(
-                            height: SizeConfig.instance().scaleHeight(56),
-                            width: SizeConfig.instance().scaleWidth(56),
+                            height: SizeConfig.instance.scaleHeight(56),
+                            width: SizeConfig.instance.scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -164,10 +164,10 @@ class PincodeScreen extends StatelessWidget {
                                   counterText: ""),
                             ),
                           ),
-                          Gap(SizeConfig.instance().scaleWidth(16)),
+                          Gap(SizeConfig.instance.scaleWidth(16)),
                           Container(
-                            height: SizeConfig.instance().scaleHeight(56),
-                            width: SizeConfig.instance().scaleWidth(56),
+                            height: SizeConfig.instance.scaleHeight(56),
+                            width: SizeConfig.instance.scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -203,10 +203,10 @@ class PincodeScreen extends StatelessWidget {
                                   counterText: ""),
                             ),
                           ),
-                          Gap(SizeConfig.instance().scaleWidth(16)),
+                          Gap(SizeConfig.instance.scaleWidth(16)),
                           Container(
-                            height: SizeConfig.instance().scaleHeight(56),
-                            width: SizeConfig.instance().scaleWidth(56),
+                            height: SizeConfig.instance.scaleHeight(56),
+                            width: SizeConfig.instance.scaleWidth(56),
                             padding: const EdgeInsets.symmetric(
                                 vertical: 4, horizontal: 16),
                             decoration: BoxDecoration(
@@ -245,7 +245,7 @@ class PincodeScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Gap(SizeConfig.instance().scaleHeight(24)),
+                    Gap(SizeConfig.instance.scaleHeight(24)),
                     AspectRatio(
                       aspectRatio: 0.5,
                       child: Container(

@@ -1,4 +1,4 @@
-import 'package:filllo_mobile/controllers/screenlock_controller.dart';
+import 'package:filllo_mobile/view_model/screenlock_controller.dart';
 import 'package:filllo_mobile/views/screens/faceid_screen.dart';
 import 'package:filllo_mobile/views/screens/fingerprint_screen.dart';
 import 'package:filllo_mobile/views/screens/get_started.dart';
@@ -22,8 +22,8 @@ class ScreenlockScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.instance().scaleWidth(8),
-                vertical: SizeConfig.instance().scaleHeight(8)),
+                horizontal: SizeConfig.instance.scaleWidth(8),
+                vertical: SizeConfig.instance.scaleHeight(8)),
             child: Row(
               children: [
                 GestureDetector(
@@ -41,7 +41,7 @@ class ScreenlockScreen extends StatelessWidget {
               ],
             ),
           ),
-          Gap(SizeConfig.instance().scaleHeight(32)),
+          Gap(SizeConfig.instance.scaleHeight(32)),
           Expanded(
             child: Container(
               width: double.maxFinite,
@@ -53,17 +53,17 @@ class ScreenlockScreen extends StatelessWidget {
               ),
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: SizeConfig.instance().scaleWidth(16)),
+                    horizontal: SizeConfig.instance.scaleWidth(16)),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Gap(SizeConfig.instance().scaleHeight(16)),
+                      Gap(SizeConfig.instance.scaleHeight(16)),
                       Text(
                         "Select\n Screen Lock Type",
                         style: AppTypography().h4,
                         textAlign: TextAlign.center,
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(16)),
+                      Gap(SizeConfig.instance.scaleHeight(16)),
                       Text(
                         "Please setup lock with either face id, fingerprint or pin code",
                         textAlign: TextAlign.center,
@@ -71,7 +71,7 @@ class ScreenlockScreen extends StatelessWidget {
                             .bodyLargeM
                             .copyWith(color: Colors.black26),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(32)),
+                      Gap(SizeConfig.instance.scaleHeight(32)),
                       GestureDetector(
                         onTap: () {
                           Provider.of<ScreenlockController>(context,
@@ -84,9 +84,8 @@ class ScreenlockScreen extends StatelessWidget {
                             builder: (context, value, a) {
                           return Container(
                             padding: EdgeInsets.symmetric(
-                                vertical: SizeConfig.instance().scaleHeight(18),
-                                horizontal:
-                                    SizeConfig.instance().scaleWidth(16)),
+                                vertical: SizeConfig.instance.scaleHeight(18),
+                                horizontal: SizeConfig.instance.scaleWidth(16)),
                             decoration: BoxDecoration(
                                 color: value.lockType == LockType.faceId
                                     ? AppColours.brightOrange
@@ -99,7 +98,7 @@ class ScreenlockScreen extends StatelessWidget {
                                   backgroundColor: Colors.white,
                                   child: Icon(Icons.face_rounded),
                                 ),
-                                Gap(SizeConfig.instance().scaleWidth(16)),
+                                Gap(SizeConfig.instance.scaleWidth(16)),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -120,14 +119,14 @@ class ScreenlockScreen extends StatelessWidget {
                                 const Expanded(child: Gap(2)),
                                 Icon(
                                   Icons.arrow_right,
-                                  size: SizeConfig.instance().scaleHeight(32),
+                                  size: SizeConfig.instance.scaleHeight(32),
                                 )
                               ],
                             ),
                           );
                         }),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(32)),
+                      Gap(SizeConfig.instance.scaleHeight(32)),
                       GestureDetector(
                         onTap: () {
                           Provider.of<ScreenlockController>(context,
@@ -140,9 +139,8 @@ class ScreenlockScreen extends StatelessWidget {
                             builder: (context, value, _) {
                           return Container(
                             padding: EdgeInsets.symmetric(
-                                vertical: SizeConfig.instance().scaleHeight(18),
-                                horizontal:
-                                    SizeConfig.instance().scaleWidth(16)),
+                                vertical: SizeConfig.instance.scaleHeight(18),
+                                horizontal: SizeConfig.instance.scaleWidth(16)),
                             decoration: BoxDecoration(
                                 color: value.lockType == LockType.fingerPrint
                                     ? AppColours.brightOrange
@@ -155,7 +153,7 @@ class ScreenlockScreen extends StatelessWidget {
                                   backgroundColor: Colors.white,
                                   child: Icon(Icons.fingerprint_rounded),
                                 ),
-                                Gap(SizeConfig.instance().scaleWidth(16)),
+                                Gap(SizeConfig.instance.scaleWidth(16)),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -178,14 +176,14 @@ class ScreenlockScreen extends StatelessWidget {
                                 const Expanded(child: Gap(2)),
                                 Icon(
                                   Icons.arrow_right,
-                                  size: SizeConfig.instance().scaleHeight(32),
+                                  size: SizeConfig.instance.scaleHeight(32),
                                 )
                               ],
                             ),
                           );
                         }),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(32)),
+                      Gap(SizeConfig.instance.scaleHeight(32)),
                       GestureDetector(
                         onTap: () {
                           Provider.of<ScreenlockController>(context,
@@ -198,9 +196,8 @@ class ScreenlockScreen extends StatelessWidget {
                             builder: (context, value, _) {
                           return Container(
                             padding: EdgeInsets.symmetric(
-                                vertical: SizeConfig.instance().scaleHeight(18),
-                                horizontal:
-                                    SizeConfig.instance().scaleWidth(16)),
+                                vertical: SizeConfig.instance.scaleHeight(18),
+                                horizontal: SizeConfig.instance.scaleWidth(16)),
                             decoration: BoxDecoration(
                                 color: value.lockType == LockType.pin
                                     ? AppColours.brightOrange
@@ -213,7 +210,7 @@ class ScreenlockScreen extends StatelessWidget {
                                   backgroundColor: Colors.white,
                                   child: Icon(Icons.pin_outlined),
                                 ),
-                                Gap(SizeConfig.instance().scaleWidth(16)),
+                                Gap(SizeConfig.instance.scaleWidth(16)),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -236,7 +233,7 @@ class ScreenlockScreen extends StatelessWidget {
                                 const Expanded(child: Gap(2)),
                                 Icon(
                                   Icons.arrow_right,
-                                  size: SizeConfig.instance().scaleHeight(32),
+                                  size: SizeConfig.instance.scaleHeight(32),
                                 )
                               ],
                             ),

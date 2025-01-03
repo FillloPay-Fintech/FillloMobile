@@ -1,4 +1,4 @@
-import 'package:filllo_mobile/controllers/onboarding_controller.dart';
+import 'package:filllo_mobile/view_model/onboarding_controller.dart';
 import 'package:filllo_mobile/views/screens/onboarding3.dart';
 
 import '../utils/utils.dart';
@@ -33,8 +33,8 @@ class Onboarding2Screen extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.only(
-                top: SizeConfig.instance().scaleHeight(37),
-                bottom: SizeConfig.instance().scaleHeight(10),
+                top: SizeConfig.instance.scaleHeight(37),
+                bottom: SizeConfig.instance.scaleHeight(10),
               ),
               child: SmoothPageIndicator(
                 effect: ScrollingDotsEffect(
@@ -76,22 +76,22 @@ class Onboarding2Screen extends StatelessWidget {
                               width: double.maxFinite,
                               child: Column(
                                 children: [
-                                  Gap(SizeConfig.instance().scaleHeight(86)),
+                                  Gap(SizeConfig.instance.scaleHeight(86)),
                                   Image.asset("assets/images/card-filllo.png"),
-                                  Gap(SizeConfig.instance().scaleHeight(42)),
+                                  Gap(SizeConfig.instance.scaleHeight(42)),
                                   Text(
                                     "Keep track on your \n Account each day",
                                     style: AppTypography()
                                         .h4
                                         .copyWith(color: Colors.white),
                                   ),
-                                  Gap(SizeConfig.instance().scaleHeight(20)),
+                                  Gap(SizeConfig.instance.scaleHeight(20)),
                                   Text(
                                     "It helps you to manage\n spending money.",
                                     style: AppTypography().bodyMediumM.copyWith(
                                         color: Colors.white,
-                                        fontSize: SizeConfig.instance()
-                                            .scaleText(17)),
+                                        fontSize:
+                                            SizeConfig.instance.scaleText(17)),
                                     textAlign: TextAlign.center,
                                   ),
                                   const Expanded(child: Gap(4)),
@@ -103,7 +103,7 @@ class Onboarding2Screen extends StatelessWidget {
                                             duration: Durations.long3,
                                             curve: Easing.standard),
                                   ),
-                                  Gap(SizeConfig.instance().scaleHeight(35)),
+                                  Gap(SizeConfig.instance.scaleHeight(35)),
                                 ],
                               ),
                             ),
@@ -127,16 +127,16 @@ class Onboarding2Screen extends StatelessWidget {
                               width: double.maxFinite,
                               child: Column(
                                 children: [
-                                  Gap(SizeConfig.instance().scaleHeight(86)),
+                                  Gap(SizeConfig.instance.scaleHeight(86)),
                                   Image.asset("assets/images/bill-filllo.png"),
-                                  Gap(SizeConfig.instance().scaleHeight(42)),
+                                  Gap(SizeConfig.instance.scaleHeight(42)),
                                   Text(
                                     "Keep an eye on your \n Account statement",
                                     style: AppTypography()
                                         .h4
                                         .copyWith(color: Colors.white),
                                   ),
-                                  Gap(SizeConfig.instance().scaleHeight(20)),
+                                  Gap(SizeConfig.instance.scaleHeight(20)),
                                   Text(
                                     "Always try to check balance statements\n We send statements every Month.",
                                     style: AppTypography()
@@ -153,7 +153,7 @@ class Onboarding2Screen extends StatelessWidget {
                                             duration: Durations.long3,
                                             curve: Easing.standard),
                                   ),
-                                  Gap(SizeConfig.instance().scaleHeight(35)),
+                                  Gap(SizeConfig.instance.scaleHeight(35)),
                                 ],
                               ),
                             ),
@@ -177,17 +177,17 @@ class Onboarding2Screen extends StatelessWidget {
                               width: double.maxFinite,
                               child: Column(
                                 children: [
-                                  Gap(SizeConfig.instance().scaleHeight(86)),
+                                  Gap(SizeConfig.instance.scaleHeight(86)),
                                   Image.asset(
                                       "assets/images/wallet-sleep-filllo.png"),
-                                  Gap(SizeConfig.instance().scaleHeight(42)),
+                                  Gap(SizeConfig.instance.scaleHeight(42)),
                                   Text(
                                     "Always Try to Save\n Money and Time.",
                                     style: AppTypography()
                                         .h4
                                         .copyWith(color: Colors.white),
                                   ),
-                                  Gap(SizeConfig.instance().scaleHeight(20)),
+                                  Gap(SizeConfig.instance.scaleHeight(20)),
                                   Text(
                                     "Filllo Pay helps you with your\n money and receive payment faster",
                                     style: AppTypography()
@@ -207,7 +207,7 @@ class Onboarding2Screen extends StatelessWidget {
                                       (route) => false,
                                     ),
                                   ),
-                                  Gap(SizeConfig.instance().scaleHeight(35)),
+                                  Gap(SizeConfig.instance.scaleHeight(35)),
                                 ],
                               ),
                             ),

@@ -1,3 +1,5 @@
+import 'package:filllo_mobile/views/screens/home.dart';
+
 import '../utils/utils.dart';
 
 import 'package:filllo_mobile/views/widgets/orange_button.dart';
@@ -16,8 +18,8 @@ class LoginScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: SizeConfig.instance().scaleWidth(8),
-                vertical: SizeConfig.instance().scaleHeight(8)),
+                horizontal: SizeConfig.instance.scaleWidth(8),
+                vertical: SizeConfig.instance.scaleHeight(8)),
             child: Row(
               children: [
                 GestureDetector(
@@ -35,7 +37,7 @@ class LoginScreen extends StatelessWidget {
               ],
             ),
           ),
-          Gap(SizeConfig.instance().scaleHeight(32)),
+          Gap(SizeConfig.instance.scaleHeight(32)),
           Expanded(
             child: Container(
               width: double.maxFinite,
@@ -47,17 +49,17 @@ class LoginScreen extends StatelessWidget {
               ),
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: SizeConfig.instance().scaleWidth(16)),
+                    horizontal: SizeConfig.instance.scaleWidth(16)),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Gap(SizeConfig.instance().scaleHeight(16)),
+                      Gap(SizeConfig.instance.scaleHeight(16)),
                       Text(
                         "Welcome\n Log In To Enter",
                         style: AppTypography().h4,
                         textAlign: TextAlign.center,
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(16)),
+                      Gap(SizeConfig.instance.scaleHeight(16)),
                       Text(
                         "Please provide\nfollowing details for your new account",
                         textAlign: TextAlign.center,
@@ -65,7 +67,7 @@ class LoginScreen extends StatelessWidget {
                             .bodyLargeM
                             .copyWith(color: Colors.black26),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(32)),
+                      Gap(SizeConfig.instance.scaleHeight(32)),
                       Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
@@ -75,7 +77,7 @@ class LoginScreen extends StatelessWidget {
                               .copyWith(color: Colors.black38),
                         ),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(8)),
+                      Gap(SizeConfig.instance.scaleHeight(8)),
                       TextField(
                         decoration: InputDecoration(
                           hintText: "filllo@gmail.com",
@@ -91,7 +93,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(16)),
+                      Gap(SizeConfig.instance.scaleHeight(16)),
                       Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
@@ -101,7 +103,7 @@ class LoginScreen extends StatelessWidget {
                               .copyWith(color: Colors.black38),
                         ),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(8)),
+                      Gap(SizeConfig.instance.scaleHeight(8)),
                       TextField(
                         decoration: InputDecoration(
                           suffixIcon: const Icon(
@@ -122,25 +124,25 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(24)),
+                      Gap(SizeConfig.instance.scaleHeight(24)),
                       Text(
                         "Forget Password?",
                         style: AppTypography()
                             .bodyMediumM
                             .copyWith(color: Colors.black38),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(16)),
+                      Gap(SizeConfig.instance.scaleHeight(16)),
                       Text(
                         "or",
                         style: AppTypography()
                             .bodySmallM
                             .copyWith(color: Colors.black38),
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(8)),
+                      Gap(SizeConfig.instance.scaleHeight(8)),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          CircleAvatar(
+                          const CircleAvatar(
                               radius: 32,
                               backgroundColor: AppColours.dark,
                               child: Icon(
@@ -148,8 +150,8 @@ class LoginScreen extends StatelessWidget {
                                 Icons.apple_outlined,
                                 color: Colors.white,
                               )),
-                          Gap(SizeConfig.instance().scaleWidth(8)),
-                          CircleAvatar(
+                          Gap(SizeConfig.instance.scaleWidth(8)),
+                          const CircleAvatar(
                               radius: 32,
                               backgroundColor: AppColours.dark,
                               child: Icon(
@@ -159,8 +161,17 @@ class LoginScreen extends StatelessWidget {
                               )),
                         ],
                       ),
-                      Gap(SizeConfig.instance().scaleHeight(52)),
-                      OrangeButton(text: "Log In", onTap: () {}),
+                      Gap(SizeConfig.instance.scaleHeight(52)),
+                      OrangeButton(
+                          text: "Log In",
+                          onTap: () {
+                            Navigator.of(context).pushAndRemoveUntil(
+                              MaterialPageRoute(
+                                builder: (context) => const Home(),
+                              ),
+                              (route) => false,
+                            );
+                          }),
                     ],
                   ),
                 ),
